@@ -1,0 +1,43 @@
+
+<form (ngSubmit)="onSubmit()" #form="ngForm">
+
+  
+ <label>Full Name:</label><br>
+    <input type="text" name="username" [(ngModel)]="username" required minlength="3" #usrnm ="ngModel"><br><br>
+ <label>Address:</label><br>
+    <input type="text" name="address" [(ngModel)]="address" required  minlength="6" #addr ="ngModel"><br><br>
+    <label>Credit card:</label><br>
+    <input type="number" name="creditCart" [(ngModel)]="creditCart" required minlength="16" maxlength="16" #credit ="ngModel"><br>
+ <p>We 'll never your payment detail with anyone else</p>
+ <button type="submit" [disabled]="form.invalid"> Submit</button>
+ 
+</form>  
+ 
+
+     <div class="alert">
+        <div *ngIf="usrnm.errors?.['required'] && usrnm.touched" >
+            <br><p> your name is required</p>
+         </div>
+    
+          <div *ngIf="addr.errors?.['minlength']&& addr.touched">
+            <br><p> your name must contain at least 3 characters.</p>
+         </div>
+    
+         <div *ngIf="addr.errors?.['required']&& addr.touched">
+            <br><p> your password is required</p>
+         </div>
+        <div *ngIf="addr.errors?.['minlength']&& addr.touched">
+            <br><p>your password must contain at least 6 characters.</p>
+         </div>
+    
+    
+        <div *ngIf="credit.errors?.['required']&& credit.touched">
+            <br> <p> your credit cart number is required</p>
+         </div>
+           <div *ngIf="credit.errors?.['minlength'] && credit.errors?.['maxlength']&& credit.touched">
+        <br> <p> your credit cart number must contain at  6 characters.</p>
+         </div> 
+     </div>
+  
+  
+    

@@ -1,0 +1,17 @@
+<div class="container">
+  <div  fxLayoutAlign="center">
+    <header><h2>{{title}}</h2></header>
+    <br>
+  </div>
+  <nav fxLayoutAlign="center">
+    <a routerLink="/">productsList </a>
+    <a routerLink="/addcart">| addcart</a>
+  </nav>
+</div>
+
+ 
+    <div  class="divw" ><app-product *ngFor="let product of  productsList" [product]="product"></app-product></div>
+  
+
+
+

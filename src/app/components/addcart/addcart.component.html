@@ -1,0 +1,30 @@
+
+<div class="divs">
+<div *ngFor="let product of  addcartproducts" class="divw">
+    <!-- <div class="imgurl" style="margin:5%;" class="divt">{{product.imgurl}}</div> -->
+    <img [src]="product.url" alt="image">
+     <h4><b>{{product.name}}</b></h4> 
+ <br>   
+ <h5>${{product.price}}</h5>
+<br>
+ <select #cart (change)="selectChange(cart.value,product)" style="width: 100px" class="form-select" aria-label="Default select example">
+    <option
+      *ngFor="let option of counts"
+      [ngValue]="option"
+      [selected]="product.amount === option"
+    >
+      {{ option }}
+    </option>
+  </select>
+<button (click)="remove(product.id)">Delete</button>
+
+</div>
+
+<div class="cart-item" style="position:relative;">
+    <b>Total Price:$ {{ total}} </b>
+</div>
+<app-form-validation  style="position:relative;"(checksuccess)="checkSuccess($event)"></app-form-validation>
+
+<br>
+ <br>
+</div>

@@ -1,0 +1,29 @@
+
+.outer{
+margin-top: 20vh;
+}
+.box{
+    width: 90%;
+    margin: 100px auto ;
+    height: 400px;
+
+}
+
+.nm{
+font-size:22px ;
+margin: 20 px 0;
+
+}
+img{
+    height:20vh;
+   width:10vw ;
+   margin-left:auto ;
+} 
+.inner {
+    width: 40%;
+    height:40% ;
+    margin:auto;
+    border:1px #d2d2e194 solid;
+    padding:10px;
+    text-align: center;
+  }

@@ -1,0 +1,19 @@
+p{
+font-size: 8px;
+}
+label{
+    
+
+    font-weight:700;
+}
+
+input{
+    margin-top:20px;
+    width:25vw ;
+    height:4vh ;
+}
+
+.alert p{
+    font-size:11px ;
+    color: red;
+}

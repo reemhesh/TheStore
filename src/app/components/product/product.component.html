@@ -1,0 +1,23 @@
+
+<div  class="divs"  >
+<div  class="divw" >
+    <!-- <div class="url" style="margin:5%;" class="divt">{{product.url}}</div> -->
+   <div>
+    <a routerLink="details/{{ product.id }}">
+    <img [src]="product.url" alt="image">
+    </a>
+    <h4><b>{{product.name}}</b></h4> price:{{product.price}} <br>
+  
+   </div>
+     <br>
+     <br>
+     <select [(ngModel)]="selectedItem" style="width:50px" class="product-item-detail form-select" (ngModelChange)="selectedChange($event)" [ngModelOptions]="{ standalone: true }">
+      <option *ngFor="let value of productCount" value="{{ value }}">
+        {{ value }}
+      </option>
+    </select>
+    <button (click)="addToCart(product)">Add</button>
+<br>  
+</div >
+
+</div>

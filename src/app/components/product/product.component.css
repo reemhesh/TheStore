@@ -1,0 +1,21 @@
+/* .divs{
+    display: grid;
+    grid-template-rows: minmax(min-content,max-content) ;
+    grid-template-columns:33.3% 33.3% 33.3%;
+    /* align-items: flex-start; 
+    align-content: flex-start 
+
+
+}
+ */
+
+.divw{
+    border: 1px rgb(164, 163, 163) solid ;
+   margin: 2em;
+   text-align: center;
+}
+
+img{
+    height:30vh;
+   width:15vw ;
+} 

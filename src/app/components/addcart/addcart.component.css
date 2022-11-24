@@ -1,0 +1,29 @@
+.divs{
+    display: grid;
+    grid-template-rows:fit-content(20%) fit-content(20%);
+    grid-template-columns:33.3% 33.3% 33.3% 33.3% ;
+    /* 
+      
+    align-items: flex-start; 
+    align-content: flex-start */
+    width:60vw;
+    height:auto;
+    margin-left:25vw ;
+
+}
+.app-form-validaton{
+    font-size: 12px;
+    color: dimgrey;
+    margin-left: 10vw;
+}
+.divw{
+   border: 1px rgb(164, 163, 163) solid ;
+   margin: 2em;
+   text-align: center;
+   width:15vw ;
+   height:40vh;
+}
+img{
+    height:30vh;
+   width:10vw ;
+} 

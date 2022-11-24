@@ -1,0 +1,19 @@
+<div class="outer">
+    <div>
+        <div class="box" class="inner">
+           
+            <img [src]="product!.url" alt="image"><br>
+         <div class="nm"><h4><b>Name: {{product!.name}}</b></h4></div>
+         <div class="nm"><h6> {{product!.description}}</h6></div>
+         <div class="nm"><b> Price:${{product!.price}}</b> </div>
+         <br>
+         <select [(ngModel)]="selectedItem" style="width:50px" class="product-item-detail form-select" (ngModelChange)="selectedChange($event)" [ngModelOptions]="{ standalone: true }">
+            <option *ngFor="let value of counts" value="{{ value }}">
+              {{ value }}
+            </option>
+          </select>
+          <br><button (click)="addToCart(product!)">Add</button><br><br>
+          <a routerLink="/" style="color:rgb(28, 196, 140) ;">Back To List</a>
+        <div>
+    </div>
+</div>
