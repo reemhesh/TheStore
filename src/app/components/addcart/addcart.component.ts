@@ -51,6 +51,7 @@ export class AddcartComponent implements OnInit {
   console.log(this.total)
 }
 remove(id:number){
+  alert("you are sure for deleting")
   const cartIndx =  this.addcartproducts?  this.addcartproducts.findIndex(cart => cart.id === id): -1;
   if(cartIndx != -1 &&  this.addcartproducts.length > 0){
     this.addcartproducts.splice(cartIndx,1)
