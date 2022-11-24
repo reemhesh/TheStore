@@ -1,0 +1,2 @@
+# TheStore
+first angular project
